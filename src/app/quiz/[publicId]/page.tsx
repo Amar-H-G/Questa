@@ -5,24 +5,19 @@ import { Metadata } from "next";
 import { getQuizByPublicId } from "@/actions/quiz";
 import QuizView from "@/components/quiz/QuizView";
 
-interface ParamsShape {
-  publicId: string;
-}
+// interface ParamsShape {
+//   publicId: string;
+// }
 
-type MaybePromiseParams = ParamsShape | Promise<ParamsShape>;
+// type MaybePromiseParams = ParamsShape | Promise<ParamsShape>;
 
 // 1) generateMetadata
 export async function generateMetadata({
   params,
 }: {
-  params: MaybePromiseParams;
+  params: Promise<{ publicId: string }>;
 }): Promise<Metadata> {
-  // If params is a Promise, await it
-  if (params instanceof Promise) {
-    params = await params;
-  }
-
-  const publicId = params.publicId;
+  const { publicId } = await params; // ✅ Just await once here
   const quiz = await getQuizByPublicId(publicId);
 
   return {
