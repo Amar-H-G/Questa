@@ -2,14 +2,14 @@
 "use client";
 
 import { useState } from "react";
-import { createQuiz } from "@/actions/quiz";
-import { QuizForm } from "@/components/quiz/QuizForm";
-import { Button } from "@/components/ui/button";
+import { createQuiz } from "../../../../actions/quiz";
+import { QuizForm } from "../../../../components/quiz/QuizForm";
+import { Button } from "../../../../components/ui/button";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
+import { createClient } from "../../../../lib/supabase/client";
 
 type QuestionType = "SINGLE_CHOICE" | "SHORT_TEXT";
 
@@ -34,7 +34,6 @@ export default function CreateQuizPage() {
   const supabase = createClient();
 
   const handleSubmit = async () => {
-
     // Get current user session
     const {
       data: { user },
@@ -95,10 +94,8 @@ export default function CreateQuizPage() {
       userId,
     };
 
-
     try {
       const result = await createQuiz(payload);
-
 
       if ("error" in result) {
         toast.error(result.error);
