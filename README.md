@@ -128,6 +128,28 @@ Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
 MIT
 
+
+## User Join Flow 
+Signup
+
+User enters name, email, password → clicks Sign Up.
+
+System sends a verification email.
+
+Email Confirmation
+
+User checks email → clicks verification link.
+
+Then go to website again and click signin
+
+Signin
+
+User enters email & password on login page.
+
+If verified → logged in.
+
+If not → show “Please verify email” message.
+
 ---
 
 <p align="center" style="color:#0070f3;font-size:1.1em;">
