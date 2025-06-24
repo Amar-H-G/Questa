@@ -1,9 +1,9 @@
 "use server";
 
-import { createServer } from "@/lib/supabase/server";
+import { createServer } from "../../lib/supabase/server";
 import { redirect } from "next/navigation";
-import { getQuizzesByUser, getAllPublicQuizzes } from "@/actions/quiz";
-import { ensureMongoUser } from "@/lib/syncUser";
+import { getQuizzesByUser, getAllPublicQuizzes } from "../../actions/quiz";
+import { ensureMongoUser } from "../../lib/syncUser";
 import Link from "next/link";
 import {
   PlusCircle,
@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 // ✅ NEW IMPORT:
-import HorizontalScroll from "@/components/HorizontalScroll";
+import HorizontalScroll from "../../components/HorizontalScroll";
 
 export default async function DashboardPage() {
   const supabase = await createServer();

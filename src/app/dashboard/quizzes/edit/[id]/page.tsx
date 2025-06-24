@@ -5,10 +5,10 @@ import { useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
-import { getQuizById, updateQuiz } from "@/actions/quiz";
-import { QuizForm } from "@/components/quiz/QuizForm";
-import { Button } from "@/components/ui/button";
+import { createClient } from "../../../../../lib/supabase/client";
+import { getQuizById, updateQuiz } from "../../../../../actions/quiz";
+import { QuizForm } from "../../../../../components/quiz/QuizForm";
+import { Button } from "../../../../../components/ui/button";
 
 type QuestionType = "SINGLE_CHOICE" | "SHORT_TEXT";
 

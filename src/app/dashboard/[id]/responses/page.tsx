@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
-import { createServer } from "@/lib/supabase/server";
-import { getQuizWithResponses } from "@/actions/quiz";
+import { createServer } from "../../../../lib/supabase/server";
+import { getQuizWithResponses } from "../../../../actions/quiz";
 import type { Metadata } from "next";
 import { promises } from "dns";
 
