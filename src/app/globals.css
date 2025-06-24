@@ -1,1 +1,6 @@
-@import "tailwindcss";
+/* @import "tailwindcss";*/
+
+/* If not using a build tool, import the compiled Tailwind CSS instead */
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
