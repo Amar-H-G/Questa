@@ -35,13 +35,13 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { publicId: string };
+  params: Promise<{ publicId: string }>;
 }) {
   // Await again in case Next passes a Promise
-  if (params instanceof Promise) {
-    params = await params;
-  }
-  const publicId = params.publicId;
+  // if (params instanceof Promise) {
+  //   params = await params;
+  // }
+  const { publicId } = await params;
 
   const quiz = await getQuizByPublicId(publicId);
   if (!quiz) {
