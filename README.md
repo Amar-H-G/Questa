@@ -12,7 +12,7 @@
 
 ## 🚀 Live Demo
 
-🌐 **Live URL:** [https://your-live-url.com](https://your-live-url.com)
+🌐 **Live URL:** https://questa-lyyb.onrender.com
 
 ---
 
@@ -95,7 +95,7 @@ See `package.json` for the full list.
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/your-username/questa.git
+git clone https://github.com/Amar-H-G/questa.git
 cd questa
 ```
 
