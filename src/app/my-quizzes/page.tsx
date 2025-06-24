@@ -2,8 +2,8 @@
 
 "use server";
 
-import { getQuizzesByUser } from "@/actions/quiz";
-import { createServer } from "@/lib/supabase/server";
+import { getQuizzesByUser } from "../../actions/quiz";
+import { createServer } from "../../lib/supabase/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { PlusCircle, FileText } from "lucide-react";

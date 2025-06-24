@@ -1,16 +1,16 @@
 "use server";
 
 import mongoose, { Types } from "mongoose";
-import { createServer } from "@/lib/supabase/server";
-import { connectToDB } from "@/lib/db";
-import Quiz from "@/models/Quiz";
-import Question from "@/models/Question";
-import { generatePublicId } from "@/lib/utils";
+import { createServer } from "../lib/supabase/server";
+import { connectToDB } from "../lib/db";
+import Quiz from "../models/Quiz";
+import Question from "../models/Question";
+import { generatePublicId } from "../lib/utils";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import Response from "@/models/Response";
-import User from "@/models/User";
-import Answer from "@/models/Answer";
+import Response from "../models/Response";
+import User from "../models/User";
+import Answer from "../models/Answer";
 
 // Type definitions
 interface PublicQuiz {

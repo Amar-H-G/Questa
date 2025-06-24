@@ -1,6 +1,6 @@
 // app/public-quizzes/page.tsx
 
-import { getAllPublicQuizzes } from "@/actions/quiz";
+import { getAllPublicQuizzes } from "../../actions/quiz";
 import { FileText } from "lucide-react";
 import PublicQuizList from "./PublicQuizList"; // ✅ import client component
 

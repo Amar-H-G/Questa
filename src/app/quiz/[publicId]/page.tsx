@@ -2,8 +2,8 @@
 
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getQuizByPublicId } from "@/actions/quiz";
-import QuizView from "@/components/quiz/QuizView";
+import { getQuizByPublicId } from "../../../actions/quiz";
+import QuizView from "../../../components/quiz/QuizView";
 
 export async function generateMetadata({
   params,

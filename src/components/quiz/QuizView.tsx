@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { submitQuizResponse } from "@/actions/quiz";
+import { submitQuizResponse } from "../../actions/quiz";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import { useRouter } from "next/navigation";

@@ -1,5 +1,5 @@
-import { connectToDB } from "@/lib/db";
-import User from "@/models/User";
+import { connectToDB } from "../lib/db";
+import User from "../models/User";
 
 // Interface for Supabase user
 interface SupabaseUser {
