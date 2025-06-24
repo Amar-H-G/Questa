@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center" style="color:#0070f3;">Questa 🎓</h1>
+<p align="center">
+  <img src="public/next.svg" width="80" alt="Next.js Logo" />
+  <img src="public/vercel.svg" width="80" alt="Vercel Logo" />
+</p>
 
-## Getting Started
+<p align="center" style="color:#22c55e;font-size:1.2em;">
+  A modern, full-stack quiz platform built with <b style="color:#0070f3;">Next.js</b>, <b style="color:#f59e42;">TypeScript</b>, and <b style="color:#3ecf8e;">Supabase</b>.
+</p>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+🌐 **Live URL:** [https://your-live-url.com](https://your-live-url.com)
+
+---
+
+## ✨ Features
+
+- 📝 **Quiz Creation:** Create, edit, and manage quizzes with multiple questions and answers.
+- 📊 **Dashboard:** View all your quizzes and their statistics in a beautiful dashboard.
+- 🔒 **Authentication:** Secure sign up and sign in with Supabase Auth.
+- 📥 **Quiz Responses:** Collect and review responses for each quiz.
+- 👀 **Public Quiz Sharing:** Share quizzes via public links.
+- 🎨 **Modern UI:** Responsive and accessible design with custom components.
+- ⚡ **API Routes:** RESTful endpoints for user and quiz management.
+
+---
+
+## 🗂️ Project Structure
+
+```
+public/
+  file.svg, globe.svg, next.svg, vercel.svg, window.svg
+src/
+  actions/quiz.ts
+  app/
+    api/users/route.ts
+    auth/signin/page.tsx
+    auth/signup/page.tsx
+    dashboard/page.tsx
+    dashboard/[id]/responses/page.tsx
+    dashboard/quizzes/create/page.tsx
+    dashboard/quizzes/edit/[id]/page.tsx
+    quiz/publicId/page.jsx
+    favicon.ico, globals.css, layout.tsx, page.tsx
+  components/
+    auth/AuthForm.tsx
+    layout/Navbar.tsx
+    quiz/QuestionEditor.tsx, QuizForm.tsx, QuizView.tsx
+    ui/button.tsx, input.tsx, label.tsx, select.tsx
+  lib/
+    db.ts, utils.ts
+    supabase/client.ts, server.ts
+  models/
+    Answer.ts, Question.ts, Quiz.ts, Response.ts, User.ts
+.eslint.config.mjs, next-env.d.ts, next.config.ts, package.json, postcss.config.mjs, README.md, tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- <span style="color:#0070f3">Next.js</span> (App Router)
+- <span style="color:#f59e42">TypeScript</span>
+- <span style="color:#3ecf8e">Supabase</span> (Database & Auth)
+- <span style="color:#38bdf8">Tailwind CSS</span>
+- <span style="color:#f472b6">Framer Motion</span> (optional, for animations)
+- <span style="color:#64748b">ESLint</span>, <span style="color:#64748b">Prettier</span> (code quality)
+- <span style="color:#64748b">PostCSS</span>
 
-## Learn More
+See `package.json` for the full list.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🗺️ Main Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Route                          | Description               |
+| ------------------------------ | ------------------------- |
+| `/`                            | Home page                 |
+| `/auth/signin`                 | Sign in                   |
+| `/auth/signup`                 | Sign up                   |
+| `/dashboard`                   | User dashboard            |
+| `/dashboard/quizzes/create`    | Create a new quiz         |
+| `/dashboard/quizzes/edit/[id]` | Edit an existing quiz     |
+| `/dashboard/[id]/responses`    | View responses for a quiz |
+| `/quiz/publicId`               | Public quiz view          |
+| `/api/users`                   | User API endpoint         |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑‍💻 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. Clone the repository
+
+```powershell
+git clone https://github.com/your-username/questa.git
+cd questa
+```
+
+### 2. Install dependencies
+
+```powershell
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a `.env.local` file in the root directory and add your Supabase credentials:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+### 4. Run the development server
+
+```powershell
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
+
+---
+
+## 🛡️ License
+
+MIT
+
+---
+
+<p align="center" style="color:#0070f3;font-size:1.1em;">
+  Made with ❤️ using Next.js, TypeScript, and Supabase.
+</p>
