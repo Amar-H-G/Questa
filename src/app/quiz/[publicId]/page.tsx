@@ -32,7 +32,11 @@ export async function generateMetadata({
 }
 
 // 2) Page component
-export default async function Page({ params }: { params: MaybePromiseParams }) {
+export default async function Page({
+  params,
+}: {
+  params: { publicId: string };
+}) {
   // Await again in case Next passes a Promise
   if (params instanceof Promise) {
     params = await params;
