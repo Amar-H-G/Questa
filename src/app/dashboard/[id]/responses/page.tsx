@@ -23,10 +23,6 @@ export const metadata: Metadata = {
   title: "Quiz Responses",
 };
 
-// type PageProps = {
-//   params: { id: string };
-// };
-
 export default async function QuizResponsesPage({
   params,
 }: {

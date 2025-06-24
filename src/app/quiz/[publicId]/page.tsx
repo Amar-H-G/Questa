@@ -5,13 +5,6 @@ import { Metadata } from "next";
 import { getQuizByPublicId } from "@/actions/quiz";
 import QuizView from "@/components/quiz/QuizView";
 
-// interface ParamsShape {
-//   publicId: string;
-// }
-
-// type MaybePromiseParams = ParamsShape | Promise<ParamsShape>;
-
-// 1) generateMetadata
 export async function generateMetadata({
   params,
 }: {
@@ -32,10 +25,6 @@ export default async function Page({
 }: {
   params: Promise<{ publicId: string }>;
 }) {
-  // Await again in case Next passes a Promise
-  // if (params instanceof Promise) {
-  //   params = await params;
-  // }
   const { publicId } = await params;
 
   const quiz = await getQuizByPublicId(publicId);
